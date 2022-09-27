@@ -8,17 +8,17 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body>
+<body class="x-overflow">
     <!-- Navigation-->
     <nav class="navbar navbar-light static-top shadow">
         <div class="container">
-            <a class="navbar-brand" href="#!">
+            <a class="navbar-brand" href="/">
                 <img src="assets/images/logo_120x96.png" alt="Mayi Kondji" width="80" height="64">
             </a>
             <a class="btn btn-primary" href="#signup">Se connecter</a>
         </div>
     </nav>
-    <header class="bg-light">
+    <header class="bg-gray">
         <div class="container">
             <div class="row pt-5 pb-5 ">
                 <div class="col-md-6 col-sm-12 pt-5 pb-5">
@@ -47,9 +47,7 @@
                     <img src="assets/images/image_700x500.png" class="img-fluid" alt="">
                 </div>
                 <div class="col-md-6 col-sm-12 pt-4 pb-5 ps-5">
-                    <p class="mt-5">
-                        <span class="fs-2">Mon espace santé</span>
-                    </p>
+                    <h2 class="fs-1 mt-5">Mon espace santé</h2>
                     <p class="fs-6 mt-3">
                         Accédez aux informations concernant :
                             <ul>
@@ -68,18 +66,31 @@
             </div>
         </div>
         <div class="row justify-content-center bg-light pt-5 pb-5">
-            <div class="col-md-4 text-center">
-                <h3 class="">Numériser son suivi médical ?</h3>
+            <div class="col-md-5 text-center">
+                <h2 class="fs-1">Numériser son suivi médical ?</h2>
                 <p class="fs-6">Approchez-vous des professionels de santé ou de nos centres de santé pour plus d'informations.</p>
                 <p class="lead">
                 <a href="https://www.google.com/maps?q=centre+medico+sociaux+au+togo&sxsrf=ALiCzsYtQjiLe42cO-Gffq-iXSo30kMNzA:1664194359205&iflsig=AJiK0e8AAAAAYzGlRzlWQRCP7aeqPvynvTbHZPFwWDFc&gs_lcp=Cgdnd3Mtd2l6EAEYADIECCMQJzIECCMQJzIECCMQJzILCC4QgAQQxwEQrwEyBQgAEIAEMgUIABCABDIFCAAQgAQyCwguEIAEEMcBEK8BMgUIABCABDILCC4QgAQQxwEQrwE6CwguEIAEELEDEIMBOggIABCxAxCDAToICAAQgAQQsQM6EQguEIAEELEDEIMBEMcBEK8BOgUIABCxAzoLCAAQgAQQsQMQgwE6DgguEIAEELEDEMcBENEDOggILhCABBCxAzoFCC4QgAQ6CAguEIAEENQCUABY2AhguBhoAHAAeACAAagCiAHxCpIBAzItNpgBAKABAQ&um=1&ie=UTF-8&sa=X&ved=2ahUKEwig_Z2Qt7L6AhXTYPEDHeIeCQoQ_AUoBHoECAEQBg" target="_blank" class="btn btn-primary">Chercher</a>
                 </p>
             </div>
         </div>
+        <div class="container">
+            <div class="row pt-5 pb-5">
+                <div class="col-md-7 pt-5 mt-5">
+                    <h2 class="fs-1">Votre santé, notre priorité. </h2>
+                    <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. In eaque, debitis labore magni minus, distinctio aspernatur quae, nam voluptatibus unde iusto consequuntur repellendus provident eum deserunt architecto est nulla qui.</p>
+                </div>
+                <div class="col-md-5">
+                    <img src="assets/images/image_500x500.png" alt="">
+                </div>
+            </div>
+        </div>
     </main>
-    <footer>
 
-    </footer>
+    <!-- Footer include -->
+    <?php 
+        include "vues/includes/footer.php";
+    ?>
 
 <script src="assets/js/bootstrap.min.js"></script>
 </body>

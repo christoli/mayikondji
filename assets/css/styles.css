@@ -2,13 +2,50 @@
 bleu : #0e6d8c
 vert : #43a842 / 
 */
-
+/* body */
+.overflow{
+    overflow: hidden;
+}
+.x-overflow{
+    overflow-x: hidden;
+}
 /* Graphics color */
 .bg-green{
     background-color: #43a842;
+}
+.bg-gray{
+    background-color: #f4f4f4;
+}
+
+/* Text Color */
+.text-white{
+    color: white;
+}
+
+/* Radius border */
+.radius{
+    border-radius: 15px;
 }
 
 /* Font size */
 .fs-7{
     font-size: 0.9rem;
+}
+
+/* Login form */
+.login-form{
+    border-radius: 15px;
+    background-color: #fff;
+}
+.vertical-align{
+    margin-top: 5%;
+}
+.login-footer{
+    width: 100%;
+    margin-top: 10%;
+}
+
+/* Create patient form */
+.ms-homme{
+    margin-left: 160px;
 }

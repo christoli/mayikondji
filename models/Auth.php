@@ -65,10 +65,10 @@ class Auth{
                 if($tokenQuery->execute()){
                     // Get logged user data
                     $this->data = array(
-                        $userData['identifiant'],
-                        $userData['lastname'],
-                        $userData['firstname'],
-                        $this->token
+                        "identifiant" => $userData['identifiant'],
+                        "lastname" => $userData['lastname'],
+                        "firstname" => $userData['firstname'],
+                        "token" => $this->token
                     );
                     // Return logged user data
                     return $this->data;

@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>Consultation</title>
     <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../assets/css/styles.css">
 </head>
 <body class="bg-gray x-overflow">
 
-    <!-- Navigation-->
-    <nav class="navbar navbar-light static-top shadow">
+  <!-- Navigation-->
+  <nav class="navbar navbar-light static-top shadow">
         <div class="container">
             <a class="navbar-brand" href="dashboard.php">
                 <img src="../../assets/images/logo_120x96.png" alt="Mayi Kondji" width="80" height="64">
@@ -32,27 +32,27 @@
                 <div class="col-10">
                     <form class="row g-3 pb-4 pe-3 ps-3 pt-3 mt-5 bg-white radius shadow">
                         <div class=" col-md-6 form-floating">
-                            <textarea class="form-control" id="motif" style="height: 70px"></textarea>
+                            <textarea class="form-control" id="motif" style="height: 70px" required></textarea>
                             <label for="motif" class="fs-5">Motif</label>
                         </div>
                         <div class=" col-md-6 form-floating">
-                            <textarea class="form-control" id="antecedant" style="height: 70px"></textarea>
+                            <textarea class="form-control" id="antecedant" style="height: 70px" required></textarea>
                             <label for="antecedant"  class="fs-5">Antecedant</label>
                         </div>
                         <div class=" col-md-6 form-floating">
-                            <textarea class="form-control" id="description" style="height: 70px"></textarea>
+                            <textarea class="form-control" id="description" style="height: 70px" required></textarea>
                             <label for="description" class="fs-5">Description de la maladie</label>
                         </div>
                         <div class=" col-md-6 form-floating">
-                            <textarea class="form-control" id="examen" style="height: 70px"></textarea>
+                            <textarea class="form-control" id="examen" style="height: 70px" required></textarea>
                             <label for="examen" class="fs-5">Examen</label>
                         </div>
                         <div class=" col-md-6 form-floating">
-                            <textarea class="form-control" id="diagnostic" style="height: 70px"></textarea>
+                            <textarea class="form-control" id="diagnostic" style="height: 70px" required></textarea>
                             <label for="diagnostic" class="fs-5">Diagnostic</label>
                         </div>
                         <div class=" col-md-6 form-floating">
-                            <textarea class="form-control" id="traitement" style="height: 70px"></textarea>
+                            <textarea class="form-control" id="traitement" style="height: 70px" required></textarea>
                             <label for="traitement" class="fs-5">Traitement</label>
                         </div>
                         <div class="col-6 mt-5">
