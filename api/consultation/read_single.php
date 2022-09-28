@@ -16,51 +16,26 @@
   // Instantiate consultation object
   $consultation = new Consultation($db);
 
- // Instantiate Auth for medecin
- $table = 'medecin';
- $auth = new Auth($db, $table);
+  $consultation->id = isset($_GET['id']) ? $_GET['id'] : die();
 
- // Get raw posted data
- $data = json_decode(file_get_contents("php://input"));
+  // Get patient
+  $consultation->read_single();
 
- // Get user token for authentication
- $result = $auth->getUserToken($data->userId, $table);
- // Get row count
- $num = $result->rowCount();
+  // Create array
+  $consultation_arr = array(
+    'id'=> $consultation->id,
+    'lastname' => $consultation->lastname,
+    'firstname' => $consultation->firstname,
+    'motif' => $consultation->motif,
+    'antecedant' =>$consultation->antecedant,
+    'description_maladie' => $consultation->description_maladie,
+    'examen' => $consultation->examen,
+    'diagnostic' => $consultation->diagnostic,
+    'traitement' => $consultation->traitement,
+    'empty' => 'full'
+  );
 
-  // Check if any token
-  if($num > 0) {
-    // Get token
-    $requestedToken = $result->fetch();
-    // Verify user token
-    if(($data->token == $requestedToken['token'])){
-        // Get id
-        $consultation->id = $data->id;
-        // Get patient
-        $consultation->read_single();
-
-        // Create array
-        $consultation_arr = array(
-          'lastname' => $consultation->lastname,
-          'firstname' => $consultation->firstname,
-          'motif' => $consultation->motif,
-          'antecedant' =>$consultation->antecedant,
-          'description_maladie' => $consultation->description_maladie,
-          'examen' => $consultation->examen,
-          'diagnostic' => $consultation->diagnostic,
-          'traitement' => $consultation->traitement
-        );
-
-        // Make JSON
-        print_r(json_encode($consultation_arr));
-    } else {
-        echo json_encode(
-          array('tokenVerify'=>false,'message' => 'Invalid token')
-        );
-      }
-  } else {
-    echo json_encode(
-      array('success'=>false,'message' => 'No token Found')
-    );
-  }
+  // Make JSON
+  print_r(json_encode($consultation_arr));
+    
 ?>

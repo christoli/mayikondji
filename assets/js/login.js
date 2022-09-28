@@ -35,8 +35,8 @@ loginForm.addEventListener("submit", async (e)=>{
 
         if(output.success){
             // Clear fields
-            identifiant = "",
-            password = ""
+            identifiant = "";
+            password = "";
             // Get data
             userId = output.identifiant;
             medLastname = output.lastname;

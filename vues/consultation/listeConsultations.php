@@ -22,7 +22,7 @@
             </ul>
             <div class="col-md-5 text-end">
                 <a href="createPatient.php"><button type="button" class="btn btn-primary">Consulter un patient</button></a>
-                <a href="#"><button type="button" class="btn btn-outline-primary me-2 btn-logout">Déconnexion</button></a>
+                <button type="button" class="btn btn-outline-primary me-2 btn-logout">Déconnexion</button>
             </div>
         </div>
     </nav>

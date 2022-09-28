@@ -17,14 +17,48 @@ vert : #43a842 /
     background-color: #f4f4f4;
 }
 
+.bg-blue{
+    background-color: #0e6d8c;
+}
+
 /* Text Color */
 .text-white{
     color: white;
+}
+.text-green{
+    color: #43a842;
+}
+.text-blue{
+    color: #0e6d8c;
 }
 
 /* Radius border */
 .radius{
     border-radius: 15px;
+}
+
+/* Buttons */
+.btn-primary{
+    border-radius: 15px;
+    background-color: #0e6d8c;
+    border: 0px solid #0e6d8c ;
+    padding: 10px 15px;
+    font-size: 18px;
+}
+
+.btn-primary:hover{
+    background-color: #43a842;
+}
+.btn-logout{
+    border-radius: 15px;
+    background-color: #063c4e;
+    border: 0px solid #063c4e ;
+    padding: 10px 15px;
+    font-size: 18px;
+    color: white;
+}
+.btn-logout:hover{
+    background-color: #0e6d8c;
 }
 
 /* Font size */

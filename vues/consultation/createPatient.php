@@ -10,20 +10,19 @@
 </head>
 <body class="bg-gray x-overflow">
       <!-- Navigation-->
-      <nav class="navbar navbar-light static-top shadow">
+    <nav class="navbar navbar-light static-top shadow">
         <div class="container">
             <a class="navbar-brand" href="dashboard.php">
-                <img src="../../assets/images/logo_120x96.png" alt="Mayi Kondji" width="80" height="64">
+                <img src="../../assets/images/logo.png" alt="Mayi Kondji" width="80" height="64">
             </a>
             <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-                <li><a href="#" class="nav-link px-2 link-dark fs-5 hover">Consultations</a></li>
-                <li><a href="#" class="nav-link px-2 link-dark fs-5 hover">Patients</a></li>
+                <li><a href="dashboard.php" class="nav-link px-2 link-dark fs-5 hover text-blue">Liste des consultations</a></li>
             </ul>
             <div class="col-md-5 text-end">
                 <a href="createPatient.php"><button type="button" class="btn btn-primary">Consulter un patient</button></a>
-                <a href="#"><button type="button" class="btn btn-outline-primary me-2 btn-logout" id="logout">Déconnexion</button></a>
+                <button type="button" class="btn btn-outline-primary me-2 btn-logout" id="logout">Déconnexion</button>
             </div>
-        </div>
+        </div> 
     </nav>
    <main class="container">
         <div class="container">
@@ -68,7 +67,7 @@
                             </label>
                         </div>
                         <div class="col-6 mt-3">
-                            <button class="btn btn-secondary" id="cancelPatientCreate">Annuler</button>
+                            <a href="dashboard.php"><button class="btn btn-secondary" id="cancelPatientCreate">Annuler</button></a>
                         </div>
                         <div class="col-6 text-end mt-3">
                             <button type="submit" class="btn btn-primary" id="validatePatientCreate">Suivant</button>

@@ -14,9 +14,9 @@
     <nav class="navbar navbar-light static-top shadow">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="../../assets/images/logo_120x96.png" alt="Mayi Kondji" width="80" height="64">
+                <img src="../../assets/images/logo.png" alt="Mayi Kondji" width="80" height="64">
             </a>
-            <span class="fs-5">Gestion des consultations</span>
+            <span class="fs-5 text-blue">Gestion des consultations</span>
         </div>
     </nav>
    <main>
@@ -36,7 +36,7 @@
                             <input type="password" class="form-control" id="password" placeholder="Mot de passe">
                         </div>
                         <div class="mb-3 text-center">
-                            <button type="submit" class="btn btn-primary">Se connecter</button>
+                            <button type="submit" class="btn btn-primary bg-blue">Se connecter</button>
                         </div>
                     </form>
                 </div>

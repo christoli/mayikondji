@@ -13,17 +13,16 @@
     <nav class="navbar navbar-light static-top shadow">
         <div class="container">
             <a class="navbar-brand" href="dashboard.php">
-                <img src="../../assets/images/logo_120x96.png" alt="Mayi Kondji" width="80" height="64">
+                <img src="../../assets/images/logo.png" alt="Mayi Kondji" width="80" height="64">
             </a>
             <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-                <li><a href="#" class="nav-link px-2 link-dark fs-5 hover">Consultations</a></li>
-                <li><a href="#" class="nav-link px-2 link-dark fs-5 hover">Patients</a></li>
+                <li><a href="dashboard.php" class="nav-link px-2 link-dark fs-5 text-blue hover ">Liste des consultations</a></li>
             </ul>
             <div class="col-md-5 text-end">
                 <a href="createPatient.php"><button type="button" class="btn btn-primary">Consulter un patient</button></a>
-                <a href="#"><button type="button" class="btn btn-outline-primary me-2 btn-logout">Déconnexion</button></a>
+                <button type="button" class="btn btn-outline-primary me-2 btn-logout" id="logout">Déconnexion</button>
             </div>
-        </div>
+        </div> 
     </nav>
    <main class="container">
         <div class="container">
@@ -32,29 +31,31 @@
             </div>
             <div class="row justify-content-center">
             <div class="col-10">
-                    <form class="row g-3 pb-4 pe-3 ps-3 pt-3 mt-5 bg-white radius shadow">
+                <div class="alert alert-danger mt-3" id="errorMsg" role="alert">
+                    </div>
+                    <form class="row g-3 pb-4 pe-3 ps-3 pt-3 mt-5 bg-white radius shadow" id="consultUpdateForm">
                         <div class=" col-md-6 form-floating">
-                            <textarea class="form-control" id="motif" style="height: 70px" required></textarea>
-                            <label for="motif" class="fs-5">Motif</label>
+                            <textarea class="form-control" id="motif" style="height: 70px" ></textarea>
+                            <label for="motif" class="fs-5" >Motif</label>
                         </div>
                         <div class=" col-md-6 form-floating">
-                            <textarea class="form-control" id="antecedant" style="height: 70px" required></textarea>
+                            <textarea class="form-control" id="antecedant" style="height: 70px" ></textarea>
                             <label for="antecedant"  class="fs-5">Antecedant</label>
                         </div>
                         <div class=" col-md-6 form-floating">
-                            <textarea class="form-control" id="description" style="height: 70px" required></textarea>
+                            <textarea class="form-control" id="description" style="height: 70px" ></textarea>
                             <label for="description" class="fs-5">Description de la maladie</label>
                         </div>
                         <div class=" col-md-6 form-floating">
-                            <textarea class="form-control" id="examen" style="height: 70px" required></textarea>
+                            <textarea class="form-control" id="examen" style="height: 70px" ></textarea>
                             <label for="examen" class="fs-5">Examen</label>
                         </div>
                         <div class=" col-md-6 form-floating">
-                            <textarea class="form-control" id="diagnostic" style="height: 70px" required></textarea>
+                            <textarea class="form-control" id="diagnostic" style="height: 70px" ></textarea>
                             <label for="diagnostic" class="fs-5">Diagnostic</label>
                         </div>
                         <div class=" col-md-6 form-floating">
-                            <textarea class="form-control" id="traitement" style="height: 70px" required></textarea>
+                            <textarea class="form-control" id="traitement" style="height: 70px" ></textarea>
                             <label for="traitement" class="fs-5">Traitement</label>
                         </div>
                         <div class="col-12 text-center mt-5">
@@ -75,5 +76,6 @@
     </div>
 </footer>
 <script src="../../assets/js/logout.js"></script>
+<script src="../../assets/js/consultUpdate.js"></script>
 </body>
 </html>

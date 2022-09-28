@@ -40,18 +40,11 @@
                 FROM ' . $this->table . ' c
                 INNER JOIN
                     patient p ON c.patient_id = p.id
-                WHERE c.medecin_id = ?
                 ORDER BY
                     c.created_at DESC';
       
       // Prepare statement
       $stmt = $this->conn->prepare($query);
-
-      // Get medecin Id
-      $this->medecin_id = $this->getMedecinId();
-
-      // Bind ID
-      $stmt->bindParam(1, $this->medecin_id);
 
       // Execute query
       $stmt->execute();
@@ -62,7 +55,7 @@
     // Get Single Consultation
     public function read_single() {
           // Create query
-          $query = 'SELECT  p.lastname, p.firstname, c.motif, c.antecedant, c.description_maladie, c.examen, c.diagnostic, c.traitement
+          $query = 'SELECT  c.id, p.lastname, p.firstname, c.motif, c.antecedant, c.description_maladie, c.examen, c.diagnostic, c.traitement
                     FROM ' . $this->table . ' c
                     INNER JOIN
                     patient p ON c.patient_id = p.id
@@ -81,6 +74,7 @@
           $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
           // Set properties
+          $this->id = $row['id'];
           $this->lastname = $row['lastname'];
           $this->firstname = $row['firstname'];
           $this->motif = $row['motif'];

@@ -20,6 +20,14 @@ let patientFirstname = "";
 // Get medecin identifiant
 let medecinId = localStorage.getItem("userId");
 
+// Cancel
+let cancelForm = document.getElementById('cancelPatientCreate');
+
+cancelForm.addEventListener("click", (e)=>{
+    e.preventDefault();
+    window.location.href = "/vues/consultation/dashboard.php";
+})
+
 // Login control
 patientCreateForm.addEventListener("submit", async (e)=>{
     try{
@@ -55,28 +63,26 @@ patientCreateForm.addEventListener("submit", async (e)=>{
         });
         const output = await res.json();
 
-        if(output.success){
+         if(output.success){
+            // clear fields
+            lastname = "";
+            firstname = "";
+            telephone = "";
+            birthday = "";
+            adresse = "";
+
+            console.log(output.success);
             // Get data
             patientId = output.id;
             patientLastname = output.lastname;
             patientFirstname = output.firstname;
+            // Patient Data on localStorage
+            localStorage.setItem("patientId", patientId);
+            localStorage.setItem("patientLastname", patientLastname);
+            localStorage.setItem("patientFirstname", patientFirstname);
             // Redirection
-            window.location.href = "/vues/consultation/createConsultation.php";
+             window.location.href = "/vues/consultation/createConsultation.php";
         } 
-        if(!output.success){
-                lastnameField.classList.add('is-invalid');
-                firstnameField.classList.add('is-invalid');
-                telephoneField.classList.add('is-invalid');
-                birthdayField.classList.add('is-invalid');
-                telephoneField.classList.add('is-invalid');
-                adresseField.classList.add('is-invalid');
-                errorMsg.style.display = "block";
-                errorMsg.textContent = "Veuillez remplir correctement les champs !";
-                setTimeout(() => {
-                    errorMsg.style.display = "none";
-                    errorMsg.textContent = "";
-                }, 5000)
-                }
     } catch(error){
             console.log(error.message);
     }

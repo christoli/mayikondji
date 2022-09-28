@@ -13,7 +13,7 @@
     <nav class="navbar navbar-light static-top shadow">
         <div class="container">
             <a class="navbar-brand" href="/">
-                <img src="assets/images/logo_120x96.png" alt="Mayi Kondji" width="80" height="64">
+                <img src="assets/images/logo.png" alt="Mayi Kondji" width="80" height="64">
             </a>
             <a class="btn btn-primary" href="#signup">Se connecter</a>
         </div>
