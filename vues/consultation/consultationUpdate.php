@@ -74,5 +74,6 @@
         </div>
     </div>
 </footer>
+<script src="../../assets/js/logout.js"></script>
 </body>
 </html>

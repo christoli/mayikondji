@@ -54,7 +54,8 @@
                 'sexe' => $row['sexe'],
                 'birthday' => $row['birth_day'],
                 'telephone' => $row['telephone'],
-                'adresse' => $row['adresse']
+                'adresse' => $row['adresse'],
+                'success' => true
             );
             // Make JSON
             print_r(json_encode($patient_arr));

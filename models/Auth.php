@@ -68,7 +68,8 @@ class Auth{
                         "identifiant" => $userData['identifiant'],
                         "lastname" => $userData['lastname'],
                         "firstname" => $userData['firstname'],
-                        "token" => $this->token
+                        "token" => $this->token,
+                        "success" => true
                     );
                     // Return logged user data
                     return $this->data;

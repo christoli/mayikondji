@@ -44,9 +44,8 @@
       
         // Create patient
         if($patient->create()) {
-          echo json_encode(
-            array('success'=>true,'message' => 'Patient Created')
-          );
+          $data = $patient->create();
+          echo json_encode($data);
         } else {
           echo json_encode(
             array('success'=>false,'message' => 'Patient not Created')

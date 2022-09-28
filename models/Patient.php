@@ -88,24 +88,61 @@
       // Execute query
       $stmt->execute(array($this->lastname, $this->firstname, $this->sexe, $this->birthday, $this->telephone));
 
-      // $row = $stmt->fetch(PDO::FETCH_ASSOC);
-
-      // // Set properties
-      // $this->lastname = $row['lastname'];
-      // $this->firstname = $row['firstname'];
-      // $this->sexe = $row['sexe'];
-      // $this->birthday = $row['birth_day'];
-      // $this->telephone = $row['telephone'];
-
       return $stmt;
+  }
+
+   // Get Single Patient id
+   public function GetPatientId($lastname, $firstname, $birthday,$sexe,$telephone) {
+    // Create query
+    $query = 'SELECT p.id, p.lastname, p.firstname, p.sexe, p.birth_day, p.telephone, p.adresse, p.created_at
+              FROM ' . $this->table . ' p
+                              WHERE
+                                p.lastname = ? AND p.firstname = ? AND p.sexe = ? AND p.birth_day = ? AND p.telephone = ?
+                              LIMIT 0,1';
+
+    // Prepare statement
+    $stmt = $this->conn->prepare($query);
+
+    // Clean data
+    $lastname = htmlspecialchars(strip_tags($lastname));
+    $firstname = htmlspecialchars(strip_tags($firstname));
+    $sexe = htmlspecialchars(strip_tags($sexe));
+    $birthday = htmlspecialchars(strip_tags($birthday));
+    $telephone = htmlspecialchars(strip_tags($telephone));
+
+    // Execute query
+    $stmt->execute(array($lastname, $firstname, $sexe, $birthday, $telephone));
+
+    if($stmt->rowCount()>0){
+      $row = $stmt->fetch();
+      $data = array(
+        "id" => $row['id'],
+        "lastname" => $row['lastname'],
+        "firstname" => $row['firstname'],
+        "success" => true
+      );
+      return $data;
+    }
 }
 
 
     // Create Patient
     public function create() {
+      //Verify is any patient
+      $result = $this->read_singlePatient();
+      if($result->rowCount()>0){
+        $row = $result->fetch();
+        $data = array(
+          "id" => $row['id'],
+          "lastname" => $row['lastname'],
+          "firstname" => $row['firstname'],
+          "success" => true
+        );
+        return $data;
+      } else {
           // Create query
           $query = 'INSERT INTO ' . $this->table . ' SET lastname = :lastname, firstname = :firstname, sexe = :sexe, 
-                            birth_day = :birthday, telephone = :telephone, adresse = :adresse, created_at = NOW()';
+          birth_day = :birthday, telephone = :telephone, adresse = :adresse, created_at = NOW()';
 
           // Prepare statement
           $stmt = $this->conn->prepare($query);
@@ -128,13 +165,16 @@
 
           // Execute query
           if($stmt->execute()) {
-            return true;
+              $result = $this->GetPatientId($this->lastname,$this->firstname,$this->sexe,$this->birthday,$this->telephone);
+
+            return $result;
+          }
+
+          // Print error if something goes wrong
+          printf("Error: %s.\n", $stmt->error);
+
+          return false;
       }
-
-      // Print error if something goes wrong
-      printf("Error: %s.\n", $stmt->error);
-
-      return false;
     }
 
     // Update Patient

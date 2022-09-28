@@ -23,15 +23,17 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-4 col-lg-4 mt-4">
-                    <form class="mt-5 p-3 shadow login-form">
+                    <div class="alert alert-danger" id="errorMsg" role="alert">
+                    </div>
+                    <form class="mt-5 p-3 shadow login-form" id="loginForm">
                         <h2 class="mb-4 text-center">Connexion</h2>
                         <div class="mb-3">
                             <!-- <label for="identifiant" class="form-label">Identifiant</label> -->
-                            <input type="text" class="form-control" id="identifiant" placeholder="Identifiant" required>
+                            <input type="text" class="form-control" id="identifiant" placeholder="Identifiant" >
                         </div>
                         <div class="mb-4">
                             <!-- <label for="password" class="form-label">Mot de passe</label> -->
-                            <input type="password" class="form-control" id="password" placeholder="Mot de passe" required>
+                            <input type="password" class="form-control" id="password" placeholder="Mot de passe">
                         </div>
                         <div class="mb-3 text-center">
                             <button type="submit" class="btn btn-primary">Se connecter</button>
@@ -50,5 +52,6 @@
         </div>
     </div>
 </footer>
+    <script src="../../assets/js/login.js"></script>
 </body>
 </html>

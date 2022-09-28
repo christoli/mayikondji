@@ -21,7 +21,7 @@
             </ul>
             <div class="col-md-5 text-end">
                 <a href="createPatient.php"><button type="button" class="btn btn-primary">Consulter un patient</button></a>
-                <a href="#"><button type="button" class="btn btn-outline-primary me-2 btn-logout">Déconnexion</button></a>
+                <a href="#"><button type="button" class="btn btn-outline-primary me-2 btn-logout" id="logout">Déconnexion</button></a>
             </div>
         </div>
     </nav>
@@ -32,7 +32,9 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-8">
-                    <form class="row g-3 pb-4 pe-3 ps-3 pt-3 mt-4 bg-white radius shadow">
+                <div class="alert alert-danger mt-3" id="errorMsg" role="alert">
+                    </div>
+                    <form class="row g-3 pb-4 pe-3 ps-3 pt-3 mt-4 bg-white radius shadow" id="patientCreateForm">
                         <div class="col-md-6 ">
                             <label for="lastname" class="form-label">Nom</label>
                             <input type="text" class="form-control" id="lastname">
@@ -66,10 +68,10 @@
                             </label>
                         </div>
                         <div class="col-6 mt-3">
-                            <button type="submit" class="btn btn-secondary">Annuler</button>
+                            <button class="btn btn-secondary" id="cancelPatientCreate">Annuler</button>
                         </div>
                         <div class="col-6 text-end mt-3">
-                            <button type="submit" class="btn btn-primary">Suivant</button>
+                            <button type="submit" class="btn btn-primary" id="validatePatientCreate">Suivant</button>
                         </div>
                     </form>
                 </div>
@@ -85,5 +87,7 @@
         </div>
     </div>
 </footer>
+<script src="../../assets/js/logout.js"></script>
+<script src="../../assets/js/createPatient.js"></script>
 </body>
 </html>

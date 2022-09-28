@@ -22,15 +22,18 @@
             </ul>
             <div class="col-md-5 text-end">
                 <a href="createPatient.php"><button type="button" class="btn btn-primary">Consulter un patient</button></a>
-                <a href="#"><button type="button" class="btn btn-outline-primary me-2 btn-logout">Déconnexion</button></a>
+                <a href="#"><button type="button" class="btn btn-outline-primary me-2 btn-logout" id="logout">Déconnexion</button></a>
             </div>
         </div>
     </nav>
    <main class="container">
         <div class="container"> 
+        <div class="row text-center mt-4">
+             <span class="fs-5" id="patientFullname"></span> 
+            </div>
             <div class="row justify-content-center">
                 <div class="col-10">
-                    <form class="row g-3 pb-4 pe-3 ps-3 pt-3 mt-5 bg-white radius shadow">
+                    <form class="row g-3 pb-4 pe-3 ps-3 pt-3 mt-5 bg-white radius shadow" id="consultCreateForm">
                         <div class=" col-md-6 form-floating">
                             <textarea class="form-control" id="motif" style="height: 70px" required></textarea>
                             <label for="motif" class="fs-5">Motif</label>
@@ -56,10 +59,10 @@
                             <label for="traitement" class="fs-5">Traitement</label>
                         </div>
                         <div class="col-6 mt-5">
-                            <button type="submit" class="btn btn-secondary">Annuler</button>
+                            <button type="submit" class="btn btn-secondary" id="consultCreateCancel">Annuler</button>
                         </div>
                         <div class="col-6 text-end mt-5">
-                            <button type="submit" class="btn btn-primary">Enrégistrer</button>
+                            <button type="submit" class="btn btn-primary" id="consultCreate">Enrégistrer</button>
                         </div>
                     </form>
                 </div>
@@ -75,5 +78,8 @@
         </div>
     </div>
 </footer>
+<script src="../../assets/js/logout.js"></script>
+<script src="../../assets/js/createPatient.js"></script>
+<script src="../../assets/js/consultCreate.js"></script>
 </body>
 </html>
