@@ -11,13 +11,13 @@
 <body class="bg-gray x-overflow">
 
     <!-- Navigation-->
-    <nav class="navbar navbar-light static-top shadow">
+    <nav class="navbar navbar-light static-top bg-white shadow">
         <div class="container">
             <a class="navbar-brand" href="dashboard.php">
                 <img src="../../assets/images/logo.png" alt="Mayi Kondji" width="80" height="64">
             </a>
             <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-                <li><a href="dashboard.php" class="nav-link px-2 link-dark fs-5 hover text-blue">Liste des consultations</a></li>
+                <li><a href="dashboard.php" class="nav-link px-2 link-dark fs-4 hover text-blue">Liste des consultations</a></li>
             </ul>
             <div class="col-md-5 text-end">
                 <a href="createPatient.php"><button type="button" class="btn btn-primary">Consulter un patient</button></a>

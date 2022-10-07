@@ -18,7 +18,7 @@ logout.addEventListener("click", async () => {
         if(output.success){
             localStorage.clear();
             // Redirection au login
-            window.location.href = "/vues/consultation/login.php";
+            window.location.href = "/";
         } else {
             alert("La déconnexion a échouée. Veuillez réessayer.");
         }

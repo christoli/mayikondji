@@ -29,7 +29,7 @@ consultCreateForm.addEventListener("submit", async (e)=>{
         let diagnostic = diagnosticField.value;
         let traitement = traitementField.value;
 
-        if(motif == "" || antecedant == "" || description == "" || examen == "" || traitement == ""){
+        if(motif == "" || antecedant == "" || description == "" || examen == "" || traitement == "" || diagnostic == ""){
             motifField.classList.add('is-invalid');
             antecedantField.classList.add('is-invalid');
             descriptionField.classList.add('is-invalid');

@@ -11,7 +11,7 @@
 </head>
 <body>
     <!-- Navigation-->
-    <nav class="navbar navbar-light static-top shadow">
+    <nav class="navbar navbar-light static-top bg-white shadow">
         <div class="container">
             <a class="navbar-brand" href="dashboard.php">
                 <img src="../../assets/images/logo_120x96.png" alt="Mayi Kondji" width="80" height="64">
