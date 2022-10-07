@@ -1,7 +1,7 @@
 # mayikondji 
 # Application de gestion des consultations
 
-# Accès
+# Accès à l'application
 Identifiant : m3333
 Mot de passe : qwerty
 
