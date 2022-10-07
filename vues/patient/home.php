@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mayi Kondji - Prenez en main votre santé</title>
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/css/styles.css">
 </head>
 <body class="x-overflow">
     <!-- Navigation-->
@@ -35,7 +35,7 @@
                     </p>
                 </div>
                 <div class="col-md-6 col-sm-12 pt-5 pb-5">
-                    <img src="assets/images/image_700x500.png" class="img-fluid" alt="">
+                    <img src="../../assets/images/image_700x500.png" class="img-fluid" alt="">
                 </div>
             </div>
         </div>
@@ -44,7 +44,7 @@
         <div class="container">
             <div class="row pt-5 pb-5 ">
                 <div class="col-md-6 col-sm-12 pt-5 pb-5 pe-5">
-                    <img src="assets/images/image_700x500.png" class="img-fluid" alt="">
+                    <img src="../../assets/images/image_700x500.png" class="img-fluid" alt="">
                 </div>
                 <div class="col-md-6 col-sm-12 pt-4 pb-5 ps-5">
                     <h2 class="fs-1 mt-5">Mon espace santé</h2>
@@ -81,7 +81,7 @@
                     <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. In eaque, debitis labore magni minus, distinctio aspernatur quae, nam voluptatibus unde iusto consequuntur repellendus provident eum deserunt architecto est nulla qui.</p>
                 </div>
                 <div class="col-md-5">
-                    <img src="assets/images/image_500x500.png" alt="">
+                    <img src="../../assets/images/image_500x500.png" alt="">
                 </div>
             </div>
         </div>
@@ -89,7 +89,7 @@
 
     <!-- Footer include -->
     <?php 
-        include "vues/includes/footer.php";
+        include "../includes/footer.php";
     ?>
 
 <script src="assets/js/bootstrap.min.js"></script>
