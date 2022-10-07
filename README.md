@@ -5,7 +5,7 @@
 Identifiant : m3333
 Mot de passe : qwerty
 
-# Backend
+# Backend et API
 Connexion/Deconnexion admin, medecin, patient : OK
 Création de médecin par l'admin : OK
 Update médecin : OK
